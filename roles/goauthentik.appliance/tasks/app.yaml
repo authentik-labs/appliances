@@ -10,8 +10,8 @@
     - authentik/certs
 - name: authentik | Download compose
   get_url:
-    url: https://raw.githubusercontent.com/goauthentik/authentik/version/{{ authentik_version }}/docker-compose.yml
-    dest: /srv/authentik
+    url: https://raw.githubusercontent.com/goauthentik/authentik/version/{{ authentik_version }}/lifecycle/container/compose.yml
+    dest: /srv/authentik/docker-compose.yml
 - name: authentik | Copy override file
   copy:
     src: ./files/docker-compose.override.yml
